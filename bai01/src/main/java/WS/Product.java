@@ -7,8 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Data
-@Entity
 /**
  CREATE TABLE tblProducts(
  productId INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -21,6 +19,7 @@ import javax.persistence.Id;
  grant all on wstutorials.* to 'hoang'@'%' with grant option;
  */
 
+@Entity
 public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

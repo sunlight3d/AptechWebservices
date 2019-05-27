@@ -38,7 +38,7 @@ public class ProductController {
                                      String description) {
         System.out.println("name  = "+productName);
         Product newProduct = new Product();
-        newProduct.setProductId(123);
+//        newProduct.setProductId(123);
         newProduct.setProductName(productName);
         newProduct.setPrice(price);
         newProduct.setDescription(description);
