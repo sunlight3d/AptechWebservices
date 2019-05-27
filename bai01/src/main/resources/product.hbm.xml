@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="WS.Product" table="tblProducts">
+        <id name="productId" type="java.lang.Integer" column="productId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="productName" type="string" column="productName"></property>
+        <property name="price" type="double" column="price"></property>
+        <property name="description" type="string" column="description"></property>
+    </class>
+</hibernate-mapping>
