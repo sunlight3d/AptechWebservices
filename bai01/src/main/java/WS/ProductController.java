@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -25,10 +26,10 @@ public class ProductController {
     Hashtable<String, Object> all(String orderBy) {
         System.out.println("Orderby = "+orderBy);
         Hashtable hastableResult = new Hashtable();
-        hastableResult.put("result", "ok");
-//        hastableResult.put("data", newProducts);
-        hastableResult.put("message", "Query products successfully");
         Iterable<Product> products = productRepository.findAll();
+        hastableResult.put("result", "ok");
+        hastableResult.put("data", products);
+        hastableResult.put("message", "Query products successfully");
 
         return hastableResult;
     }
@@ -38,7 +39,9 @@ public class ProductController {
                                      String description) {
         System.out.println("name  = "+productName);
         Product newProduct = new Product();
-//        newProduct.setProductId(123);
+        Date date= new Date();
+        Integer currentTimestamp = (int) (long) date.getTime();
+        newProduct.setProductId(currentTimestamp);
         newProduct.setProductName(productName);
         newProduct.setPrice(price);
         newProduct.setDescription(description);
