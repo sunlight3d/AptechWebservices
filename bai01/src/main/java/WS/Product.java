@@ -23,14 +23,14 @@ import javax.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer productId;
+    private Long productId;
 
     private String productName;
     private String description;
     private Double price;
 
 
-    public Integer getProductId() {
+    public Long getProductId() {
         return productId;
     }
 
@@ -46,7 +46,7 @@ public class Product {
         return description;
     }
 
-    public void setProductId(Integer productId) {
+    public void setProductId(Long productId) {
         this.productId = productId;
     }
 

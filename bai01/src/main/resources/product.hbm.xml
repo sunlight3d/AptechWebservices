@@ -4,7 +4,7 @@
         "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="WS.Product" table="tblProducts">
-        <id name="productId" type="java.lang.Integer" column="productId">
+        <id name="productId" type="java.lang.Long" column="productId">
             <generator class="assigned"></generator>
         </id>
         <property name="productName" type="string" column="productName"></property>
